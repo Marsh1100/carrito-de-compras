@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="shortcut icon" href="img/carrito-de-compras.ico">
+    <title>Carrito de compras</title>
+</head>
+<body>
+
+  <header>
+    <h1>Carrito de compras</h1>
+    <img src="img/carrito-de-compras.png" alt="carrito.png" style="height: 70px;">
+  </header>
+  
+  <main>
+    <section class="tableProducts" id="table-products">
+      <table class="table table-bordered">
+        <thead style="text-align:center;" class="table-dark" >
+          <tr>
+            <th scope="col" class="col-3">Producto</th>
+            <th scope="col" class="col-4">Descripción</th>
+            <th scope="col" class="col-2">Precio</th>
+            <th scope="col" class="col-1">Cantidad</th>
+            <th scope="col" class="col-2">Agregar al carrito</th>
+          </tr>
+        </thead>
+        <tbody id="productos">
+          <!--Se llena de forma dinámica-->
+          <tr>
+            <td>
+              <div class="producto">
+                <img src="https://cdn-icons-png.flaticon.com/512/75/75472.png" class="imgProducts" alt="...">
+                <p>Nintendo</p>
+              </div>
+  
+            </td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit!</td>
+            <td> 10 </td>
+            <td>
+              <div class="btnIncrementar">
+                <button id="btn-menos" onclick="incrementar()">-</button>
+                <p id="cantidad">0</p>
+                <button id="btn-mas">+</button>
+              </div> 
+             
+            </td>
+            <td>
+              <button type="button" class="btn btn-success carrito">
+                <i class="bi bi-cart4"></i>
+              </button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+
+    <section id="compra" class="compra hidden">
+      <h4>Compra</h4>
+      <div id="productos-seleccionados">
+        <table class="table">
+          <thead >
+            <th class="col-4">Concepto</th>
+            <th class="col-2 tr">Cantidad</th>
+            <th class="col-2 tr">Subtotal</th>
+            <th></th>
+          </thead>
+          <tbody id="carrito">
+            <!--Se llena dinámicamente-->
+            <tr>
+              <td>Barbie edición Sirenita</td>
+              <td  class="tr">2</td>
+              <td  class="tr">$80590</td>
+            </tr>
+            
+            <tr>
+              <td></td>
+              <td class="tr">Total</td>
+              <td class="tr">2</td>
+            </tr>
+          </tbody>
+          
+        </table>
+      </div>
+    </section>
+  </main>
+  
+ 
+
+  <footer>©Margie Bocanegra</footer>
+
+  <!--Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <!--JavaScript-->
+  <script src="carrito.js"></script>
+</body>
+</html>
